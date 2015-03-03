@@ -1,26 +1,35 @@
----
----
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title>{{ site.default_page_title }}</title>
+    <title>Chase Seibert | blog</title>
     <link href="http://chase-seibert.github.com/blog/atom.xml" rel="self"/>
     <link href="http://chase-seibert.github.com/blog/" />
-    <updated>{{ site.time |date_to_xmlschema }}</updated>
+    <updated>2015-03-03T15:34:39-08:00</updated>
     <id>http://chase-seibert.github.com/blog/</id>
     <author>
         <name>Chase Seibert</name>
         <email>chase.seibert+blog@gmail.com</email>
     </author>
 
-    {% for post in site.posts limit:10 %}
+    
         <entry>
-            <title>{{ post.title }}</title>
-            <link href="{{ site.baseurl }}{{ post.url }}"/>
-            <updated>{{ post.date |date_to_xmlschema }}</updated>
-            <id>http://chase-seibert.github.com/blog/{{ post.id }}</id>
-            <content type="html">{{ post.content |xml_escape }}</content>
+            <title>a greeting and a welcome</title>
+            <link href="/blog/2015/03/03/a-greeting-and-a-welcome.html"/>
+            <updated>2015-03-03T00:00:00-08:00</updated>
+            <id>http://chase-seibert.github.com/blog//2015/03/03/a-greeting-and-a-welcome</id>
+            <content type="html">&lt;p&gt;Hi there. &lt;/p&gt;
+
+&lt;p&gt;So I started a blog. As a disclaimer for you, the reader, I want to let you know that I do not claim to be an expert, nor am I a wordsmith. 
+What I am is a student. A student of Software Engineering to be exact. And so I&amp;#39;m going to be giving that perspective here on this blog.&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;ve been warned. &lt;/p&gt;
+
+&lt;p&gt;Content of this blog will usually be related to topics that I am working on at the time. They will usually be something that I had trouble with 
+or that I feel like talking about. &lt;/p&gt;
+
+&lt;p&gt;FYI Source code for this blog came from Chase Seibert&amp;#39;s blog repository on GitHub &lt;a href=&quot;https://github.com/chase-seibert/blog&quot;&gt;and here is the link&lt;/a&gt;&lt;/p&gt;
+</content>
         </entry>
-    {% endfor %}
+    
 
 </feed>
